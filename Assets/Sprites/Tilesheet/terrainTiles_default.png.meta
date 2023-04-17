@@ -144,7 +144,7 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: e7ee79674e0a3114b87227e5a376a387
-      internalID: -1801443225
+      internalID: -8676506849857898454
       vertices: []
       indices: 
       edges: []
@@ -165,7 +165,7 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: 5f9e8bb47c6676847b6299456ce20aec
-      internalID: 79033907
+      internalID: 8908279601562170909
       vertices: []
       indices: 
       edges: []
@@ -180,7 +180,9 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      terrainTiles_default_1: 8908279601562170909
+      terrainTiles_default_0: -8676506849857898454
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
