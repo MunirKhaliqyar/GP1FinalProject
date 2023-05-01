@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class HealthController : MonoBehaviour
 {
-    [SerializeField] private int initialHealth = 3;
+    [SerializeField] public int initialHealth = 4;
 
     private int currentHealth;
     // Start is called before the first frame update
