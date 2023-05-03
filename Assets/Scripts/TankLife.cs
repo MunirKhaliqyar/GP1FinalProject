@@ -22,6 +22,7 @@ public class TankLife : MonoBehaviour
         if(other.tag == "Bullets")
         {
             Debug.Log("Taking damage");
+            other.gameObject.SetActive(false);
             healthController.TakeDamage(1);
         }
     }

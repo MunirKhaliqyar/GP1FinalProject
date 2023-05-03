@@ -1,21 +1,30 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class HealthController : MonoBehaviour
 {
     [SerializeField] public int initialHealth = 3;
+    [SerializeField] Slider slider;
 
-    UIController uIcontroller;
+    [SerializeField] GameObject endGameUI;
+    [SerializeField] GameObject healthUI;
+
+    [SerializeField] TextMeshProUGUI winnerText;
+
+    Animator animator;
+
 
     public int currentHealth;
     // Start is called before the first frame update
     void Start()
     {
-        uIcontroller = gameObject.GetComponent<UIController>();
        // uIController.SetMaxHealth(initialHealth);
         ResetHealth();
+        animator = GetComponent<Animator>();
+        SetMaxHealth(initialHealth);
     }
 
     // Update is called once per frame
@@ -27,8 +36,11 @@ public class HealthController : MonoBehaviour
         else
         {
             Debug.Log("player1 is dead");
-            uIcontroller.Restart();
-            // do something
+            // show restart ui
+            winnerText.text = "Player 2 won!";
+            Restart();
+
+
         }
         if (GameObject.Find("Player2"))
         {
@@ -37,25 +49,29 @@ public class HealthController : MonoBehaviour
         else
         {
             Debug.Log("player2 is dead");
-            uIcontroller.Restart();
-            // do something
+            // show restart ui
+            winnerText.text = "Player 1 won!";
+            Restart();
         }
     }
 
     void FixedUpdate()
     {
+        SetHealth(currentHealth);
+
     }
 
     public void TakeDamage(int damageAmount)
     {
         currentHealth -= damageAmount;
-       // uIController.SetHealth(currentHealth);
         Debug.Log(currentHealth);
 
         if (currentHealth <= 0)
         {
+            animator.SetBool("death", true);
             Destroy(gameObject);
             Debug.Log("player is dead");
+            Time.timeScale = 0;
         }
     }
 
@@ -74,5 +90,22 @@ public class HealthController : MonoBehaviour
         {
             ResetHealth();
         }
+    }
+
+    public void Restart()
+    {
+        healthUI.SetActive(false);
+        endGameUI.SetActive(true);
+    }
+
+    public void SetMaxHealth(int health)
+    {
+        slider.maxValue = health;
+        slider.value = health;
+    }
+
+    public void SetHealth(int health)
+    {
+        slider.value = health;
     }
 }
