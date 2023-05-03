@@ -4,16 +4,25 @@ using UnityEngine;
 
 public class TankLife : MonoBehaviour
 {
-    [SerializeField] public int health = 4;
+    HealthController healthController;
     // Start is called before the first frame update
     void Start()
     {
-        
+        healthController = GetComponent<HealthController>();
     }
 
     // Update is called once per frame
     void Update()
     {
         
+    }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if(other.tag == "Bullets")
+        {
+            Debug.Log("Taking damage");
+            healthController.TakeDamage(1);
+        }
     }
 }

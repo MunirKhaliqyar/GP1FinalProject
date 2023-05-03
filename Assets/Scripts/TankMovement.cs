@@ -8,6 +8,10 @@ public class TankMovement : MonoBehaviour
     [SerializeField] Transform bulletSpawnPoint;
     [SerializeField] GameObject bulletPrefab;
     [SerializeField] ParticleSystem dustParticleSystem;
+    [SerializeField] AudioSource bulletSound;
+
+    HealthController healthController;
+    
 
     [SerializeField] GameObject shotDirection;
 
@@ -45,6 +49,7 @@ public class TankMovement : MonoBehaviour
     {
         if (key && Time.time > nextShootTime) 
         {
+            bulletSound.Play();
             nextShootTime = Time.time + 0.7f;
 
             Vector3 bulletSpawnPositon = bulletSpawnPoint.position;
@@ -59,17 +64,13 @@ public class TankMovement : MonoBehaviour
                 angle = 360 - angle;
             }
 
-
             Quaternion bulletRotation = Quaternion.AngleAxis(angle, Vector3.forward);
 
             GameObject newBullet = Instantiate(bulletPrefab, bulletSpawnPoint.transform.position, bulletRotation);
 
             Rigidbody2D bulletRB = newBullet.gameObject.GetComponent<Rigidbody2D>();
 
-            
-
             bulletRB.velocity =  bulletDirection * bulletSpeed;
         }
     }
-   
 }
