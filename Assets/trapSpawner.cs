@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class mineController : MonoBehaviour
+public class trapSpawner : MonoBehaviour
 {
     // Start is called before the first frame update
     void Start()
