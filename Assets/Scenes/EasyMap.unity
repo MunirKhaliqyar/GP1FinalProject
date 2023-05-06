@@ -4155,6 +4155,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Barrel: {fileID: 8775242132441279943, guid: c7e8cfc4755f32c4494490fbe761aca9, type: 3}
   Mine: {fileID: 4692579404883946055, guid: d2145de7954080e4fbbff4fef3c134de, type: 3}
+  player: {fileID: 1956664050}
+  player2: {fileID: 1733740304}
 --- !u!4 &456128480
 Transform:
   m_ObjectHideFlags: 0
@@ -14262,6 +14264,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9a39e6978ca3843439f117b190cd6767, type: 3}
+--- !u!1 &1733740304 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2427541920395167238, guid: 9a39e6978ca3843439f117b190cd6767, type: 3}
+  m_PrefabInstance: {fileID: 1733740303}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1738364032
 GameObject:
   m_ObjectHideFlags: 0
@@ -16027,6 +16034,11 @@ PrefabInstance:
       objectReference: {fileID: 1178990120}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dc8064d42c77def46b18e33b1dee86b8, type: 3}
+--- !u!1 &1956664050 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 602401136024264665, guid: dc8064d42c77def46b18e33b1dee86b8, type: 3}
+  m_PrefabInstance: {fileID: 1956664049}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1958551792
 GameObject:
   m_ObjectHideFlags: 0

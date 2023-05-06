@@ -11,6 +11,8 @@ public class trapSpawner : MonoBehaviour
 
     [SerializeField] GameObject Barrel;
     [SerializeField] GameObject Mine;
+    [SerializeField] GameObject player;
+    [SerializeField] GameObject player2;
 
     private int maxNumberBarrel;
     private int maxNumberMine;
@@ -60,8 +62,8 @@ public class trapSpawner : MonoBehaviour
 
     private void SpawnBarrel()
     {
-        Vector2 player1Pos = GameManager.player1.transform.position;
-        Vector2 player2Pos = GameManager.player2.transform.position;
+        Vector2 player1Pos = player.transform.position;
+        Vector2 player2Pos = player2.transform.position;
 
         float maxHeight = Random.Range(-4f, 4f);
         float maxWeith = Random.Range(-8.5f, 8f);
@@ -81,8 +83,8 @@ public class trapSpawner : MonoBehaviour
 
     private void SpawnMine()
     {
-        Vector2 player1Pos = GameManager.player1.transform.position;
-        Vector2 player2Pos = GameManager.player2.transform.position;
+        Vector2 player1Pos = player.transform.position;
+        Vector2 player2Pos = player2.transform.position;
 
         float maxHeight = Random.Range(-4.5f, 4.5f);
         float maxWeith = Random.Range(-7.5f, 10f);
