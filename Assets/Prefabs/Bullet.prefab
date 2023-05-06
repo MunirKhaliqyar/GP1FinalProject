@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 8776071201964314533}
   - component: {fileID: 7569866093269575485}
   - component: {fileID: 7706395547533729866}
+  - component: {fileID: 396562660}
   m_Layer: 0
   m_Name: Bullet
   m_TagString: Bullets
@@ -118,7 +119,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -146,4 +147,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56b99c65e00f8cd4db461302565cd803, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lifeTime: 5
+--- !u!95 &396562660
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7976943547187121636}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 40e47c538cd6dca469891908362855e1, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
