@@ -6,22 +6,20 @@ using UnityEngine.UI;
 
 public class HealthController : MonoBehaviour
 {
-    [SerializeField] public int initialHealth = 10;
+    [SerializeField] public int initialHealth = 3;
     [SerializeField] Slider slider;
-
     [SerializeField] GameObject endGameUI;
     [SerializeField] GameObject healthUI;
-
+    [SerializeField] GameObject healthUI2;
     [SerializeField] TextMeshProUGUI winnerText;
 
     Animator animator;
 
-
     public int currentHealth;
-    // Start is called before the first frame update
-    void Start()
+    // Start is called before the first frame update
+    void Start()
     {
-       // uIController.SetMaxHealth(initialHealth);
+        // uIController.SetMaxHealth(initialHealth);
         ResetHealth();
         animator = GetComponent<Animator>();
         SetMaxHealth(initialHealth);
@@ -30,17 +28,16 @@ public class HealthController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (GameObject.Find("Player")){
+        if (GameObject.Find("Player"))
+        {
             Debug.Log("player1 is alive");
         }
         else
         {
             Debug.Log("player1 is dead");
-            // show restart ui
-            winnerText.text = "Player 2 won!";
+            // show restart ui
+            winnerText.text = "Player 2 won!";
             Restart();
-
-
         }
         if (GameObject.Find("Player2"))
         {
@@ -49,8 +46,8 @@ public class HealthController : MonoBehaviour
         else
         {
             Debug.Log("player2 is dead");
-            // show restart ui
-            winnerText.text = "Player 1 won!";
+            // show restart ui
+            winnerText.text = "Player 1 won!";
             Restart();
         }
     }
@@ -58,7 +55,6 @@ public class HealthController : MonoBehaviour
     void FixedUpdate()
     {
         SetHealth(currentHealth);
-
     }
 
     public void TakeDamage(int damageAmount)
@@ -69,10 +65,15 @@ public class HealthController : MonoBehaviour
         if (currentHealth <= 0)
         {
             animator.SetBool("death", true);
-            Destroy(gameObject);
+            Destroy(gameObject, 1f);
             Debug.Log("player is dead");
-            Time.timeScale = 0;
+            Invoke("StopGame", 2f);
         }
+    }
+
+    void StopGame()
+    {
+        Time.timeScale = 0;
     }
 
     private void ResetHealth()
@@ -83,9 +84,8 @@ public class HealthController : MonoBehaviour
     public void Heal(int healAmount)
     {
         currentHealth += healAmount;
-       // uIController.SetHealth(currentHealth + healAmount);
+        // uIController.SetHealth(currentHealth + healAmount);
         Debug.Log("healing player");
-
         if (currentHealth > initialHealth)
         {
             ResetHealth();
@@ -95,6 +95,7 @@ public class HealthController : MonoBehaviour
     public void Restart()
     {
         healthUI.SetActive(false);
+        healthUI2.SetActive(false);
         endGameUI.SetActive(true);
     }
 

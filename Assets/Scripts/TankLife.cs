@@ -5,10 +5,12 @@ using UnityEngine;
 public class TankLife : MonoBehaviour
 {
     HealthController healthController;
+    Animator animator;
     // Start is called before the first frame update
     void Start()
     {
         healthController = GetComponent<HealthController>();
+        animator = GetComponent<Animator>();
     }
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -16,7 +18,8 @@ public class TankLife : MonoBehaviour
         if(other.tag == "Bullets")
         {
             Debug.Log("Taking damage");
-            //other.gameObject.SetActive(false);
+            animator.SetBool("Explosion", true);
+            Destroy(this.gameObject, 1f);
             healthController.TakeDamage(2);
         }
 
