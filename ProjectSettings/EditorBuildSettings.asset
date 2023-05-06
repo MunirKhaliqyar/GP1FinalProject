@@ -9,9 +9,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Munir.unity
     guid: c386d1409f99399419877e9d79f6eed1
   - enabled: 1
-    path: Assets/Scenes/Arun.unity
-    guid: 7e594f3b38554a1449c9f60cabcb8250
-  - enabled: 1
     path: Assets/Scenes/Registration.unity
     guid: 8c9cfa26abfee488c85f1582747f6a02
+  - enabled: 1
+    path: Assets/Scenes/Arun.unity
+    guid: 7e594f3b38554a1449c9f60cabcb8250
   m_configObjects: {}
