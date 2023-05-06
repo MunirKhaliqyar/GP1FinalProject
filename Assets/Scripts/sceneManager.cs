@@ -7,14 +7,7 @@ using UnityEngine.UI;
 
 public class sceneManager : MonoBehaviour
 {
-    private Button startButton;
     private bool continueGame = false;
-
-    private void Start()
-    {
-        startButton = GetComponent<Button>();
-        startButton.enabled = false;
-    }
 
     private void Update()
     {
@@ -27,12 +20,10 @@ public class sceneManager : MonoBehaviour
         if (rightUserName == "" || leftUserName == "" || rightTankColor == leftTankColor || mapChoice == "")
         {
             continueGame = false;
-            startButton.enabled = false;
         }
         else
         {
             continueGame = true;
-            startButton.enabled = true;
 
         }
     }

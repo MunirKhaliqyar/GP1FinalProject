@@ -19,18 +19,17 @@ public class PlayerPrefsController : MonoBehaviour
     {
         PlayerPrefs.SetString("leftTankColor", tank.mainTexture.name);
         Debug.Log(tank.texture.name);
-        Debug.Log("Click");
+
     }
 
     public void saveRightTankColor()
     {
-        Debug.Log("Click");
+        Debug.Log(tank.mainTexture.name);
         PlayerPrefs.SetString("rightTankColor", tank.mainTexture.name);
     }
 
     public void saveMapChoice()
     {
-        Debug.Log("Click");
         PlayerPrefs.SetString("mapChoice", map.mainTexture.name);
         Debug.Log(map.mainTexture.name);
     }
