@@ -22,7 +22,12 @@ public class TankLife : MonoBehaviour
         if(other.tag == "Bullets")
         {
             Debug.Log("Taking damage");
-            other.gameObject.SetActive(false);
+            //other.gameObject.SetActive(false);
+            healthController.TakeDamage(2);
+        }
+
+        if(other.tag == "Barrel" ||  other.tag == "Mine")
+        {
             healthController.TakeDamage(1);
         }
     }
