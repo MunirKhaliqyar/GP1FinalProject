@@ -14,12 +14,10 @@ public class trapSpawner : MonoBehaviour
     private int maxNumberBarrel = 3;
     private int maxNumberMine = 3;
 
-    private Animator animator;
 
     // Start is called before the first frame update
     void Start()
     {
-        animator = GetComponent<Animator>();
         while(barrelAmount < maxNumberBarrel)
         {
             SpawnBarrel();
@@ -33,6 +31,9 @@ public class trapSpawner : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        Debug.Log("Mines: " + mineAmount);
+        Debug.Log("Barrels: " + barrelAmount);
+
         if (barrelAmount < maxNumberBarrel)
         {
             SpawnBarrel();
