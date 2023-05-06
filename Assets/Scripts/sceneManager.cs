@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.Specialized;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -8,14 +9,14 @@ using UnityEngine.UI;
 public class sceneManager : MonoBehaviour
 {
     private bool continueGame = false;
-
+    string mapChoice;
     private void Update()
     {
         string rightUserName = PlayerPrefs.GetString("rightUserName");
         string leftUserName = PlayerPrefs.GetString("leftUserName");
         string rightTankColor = PlayerPrefs.GetString("rightTankColor");
         string leftTankColor = PlayerPrefs.GetString("leftTankColor");
-        string mapChoice = PlayerPrefs.GetString("mapChoice");
+        mapChoice = PlayerPrefs.GetString("mapChoice");
 
         if (rightUserName == "" || leftUserName == "" || rightTankColor == leftTankColor || mapChoice == "")
         {
@@ -30,9 +31,13 @@ public class sceneManager : MonoBehaviour
 
     public void StartGame()
     {
-        if (continueGame == true)
+        if (continueGame == true && mapChoice == "easyScene")
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        }
+        else if(continueGame == true && mapChoice == "hardScene")
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 2);
         }
     }
 }

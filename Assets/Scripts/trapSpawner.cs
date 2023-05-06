@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UIElements;
 
@@ -11,13 +12,24 @@ public class trapSpawner : MonoBehaviour
     [SerializeField] GameObject Barrel;
     [SerializeField] GameObject Mine;
 
-    private int maxNumberBarrel = 3;
-    private int maxNumberMine = 3;
+    private int maxNumberBarrel;
+    private int maxNumberMine;
 
 
     // Start is called before the first frame update
     void Start()
     {
+        if (PlayerPrefs.GetString("mapChoice") == "easyScene")
+        {
+            maxNumberBarrel = 2;
+            maxNumberMine = 2;
+        }
+        else if(PlayerPrefs.GetString("mapChoice") == "hardScene")
+        {
+            maxNumberBarrel = 5;
+            maxNumberMine = 5;
+        }
+
         while(barrelAmount < maxNumberBarrel)
         {
             SpawnBarrel();

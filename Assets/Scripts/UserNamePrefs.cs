@@ -9,8 +9,12 @@ public class UserNamePrefs : MonoBehaviour
     [SerializeField] InputField leftUserName;
     // Start is called before the first frame update
   
+
     public void savePlayerPrefs()
     {
+        //PlayerPrefs.SetString("rightUserName", "");
+        //PlayerPrefs.SetString("leftUserName", "");
+
         PlayerPrefs.SetString("rightUserName", rightUserName.text);
         PlayerPrefs.SetString("leftUserName", leftUserName.text);
     }
