@@ -64,7 +64,7 @@ public class HealthController : MonoBehaviour
 
         if (currentHealth <= 0)
         {
-            animator.SetBool("death", true);
+            animator.SetBool("Explosion", true);
             Destroy(gameObject, 1f);
             Debug.Log("player is dead");
             Invoke("StopGame", 2f);
