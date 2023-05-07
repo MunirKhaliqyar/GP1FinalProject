@@ -14,11 +14,9 @@ public class sceneManager : MonoBehaviour
     {
         string rightUserName = PlayerPrefs.GetString("rightUserName");
         string leftUserName = PlayerPrefs.GetString("leftUserName");
-        string rightTankColor = PlayerPrefs.GetString("rightTankColor");
-        string leftTankColor = PlayerPrefs.GetString("leftTankColor");
         mapChoice = PlayerPrefs.GetString("mapChoice");
 
-        if (rightUserName == "" || leftUserName == "" || rightTankColor == leftTankColor || mapChoice == "")
+        if (rightUserName == "" || leftUserName == "" || mapChoice == "")
         {
             continueGame = false;
         }

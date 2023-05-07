@@ -13850,8 +13850,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef827fc8d1470ec418700b4f55b9663f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  p1: {fileID: 1439734121}
-  p2: {fileID: 132440135}
+  rightUser: {fileID: 0}
+  leftUser: {fileID: 0}
 --- !u!4 &1427894738
 Transform:
   m_ObjectHideFlags: 0
@@ -13881,6 +13881,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Barrel: {fileID: 8775242132441279943, guid: c7e8cfc4755f32c4494490fbe761aca9, type: 3}
   Mine: {fileID: 4692579404883946055, guid: d2145de7954080e4fbbff4fef3c134de, type: 3}
+  player: {fileID: 0}
+  player2: {fileID: 0}
 --- !u!1 &1432063789
 GameObject:
   m_ObjectHideFlags: 0
@@ -14133,11 +14135,6 @@ Transform:
   m_Father: {fileID: 335315820}
   m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -91.18}
---- !u!1 &1439734121 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 602401136024264665, guid: dc8064d42c77def46b18e33b1dee86b8, type: 3}
-  m_PrefabInstance: {fileID: 602401136759277232}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1444376178
 GameObject:
   m_ObjectHideFlags: 0

@@ -1,17 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Animations;
 
 public class TankMovement : MonoBehaviour
 {
     [SerializeField] Transform bulletSpawnPoint;
     [SerializeField] GameObject bulletPrefab;
-    [SerializeField] ParticleSystem dustParticleSystem;
-    [SerializeField] AudioSource bulletSound;
-
-    HealthController healthController;
-    
+    [SerializeField] AudioSource bulletSound;   
 
     [SerializeField] GameObject shotDirection;
 
