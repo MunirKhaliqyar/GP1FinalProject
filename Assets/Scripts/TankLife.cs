@@ -19,8 +19,8 @@ public class TankLife : MonoBehaviour
         {
             Debug.Log("Taking damage");
             animator.SetBool("Explosion", true);
-            Destroy(this.gameObject, 1f);
-            healthController.TakeDamage(2);
+            other.gameObject.SetActive(false);
+            healthController.TakeDamage(1);
         }
 
         if(other.tag == "Barrel" ||  other.tag == "Mine")

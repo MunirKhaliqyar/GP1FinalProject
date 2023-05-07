@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class UIController : MonoBehaviour
+public class SceneController : MonoBehaviour
 {
     public void ReloadPlayScene()
     {
