@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class HealthController : MonoBehaviour
 {
-    [SerializeField] public int initialHealth = 3;
+    [SerializeField] public int initialHealth = 10;
     [SerializeField] Slider slider;
     [SerializeField] GameObject endGameUI;
     [SerializeField] GameObject healthUI;
@@ -64,7 +64,7 @@ public class HealthController : MonoBehaviour
 
         if (currentHealth <= 0)
         {
-            animator.SetBool("death", true);
+            animator.SetBool("Explosion", true);
             Destroy(gameObject, 1f);
             Debug.Log("player is dead");
             Invoke("StopGame", 2f);
