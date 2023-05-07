@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class HealthController : MonoBehaviour
 {
-    [SerializeField] public int initialHealth = 3;
+    [SerializeField] public int initialHealth = 10;
     [SerializeField] Slider slider;
     [SerializeField] GameObject endGameUI;
     [SerializeField] GameObject healthUI;

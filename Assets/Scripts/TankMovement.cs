@@ -7,8 +7,8 @@ public class TankMovement : MonoBehaviour
     [SerializeField] Transform bulletSpawnPoint;
     [SerializeField] GameObject bulletPrefab;
     [SerializeField] AudioSource bulletSound;   
-
     [SerializeField] GameObject shotDirection;
+    [SerializeField] ParticleSystem dust;
 
     float nextShootTime = 0f;
 
@@ -25,6 +25,15 @@ public class TankMovement : MonoBehaviour
         {
             float moveVector = Input.GetAxisRaw("Vertical");
             float rotateVector = Input.GetAxisRaw("Horizontal");
+
+            if(moveVector == 0 && rotateVector == 0)
+            {
+                StopDust();
+            }
+            else
+            {
+                CreateDust();
+            }
             
             this.transform.Translate(0f, - moveVector * moveSpeed * Time.deltaTime, 0f);
             this.transform.Rotate(0f, 0f, - rotateVector * (rotateSpeed * 10) * Time.deltaTime);
@@ -33,6 +42,15 @@ public class TankMovement : MonoBehaviour
         {
             float moveVector = Input.GetAxisRaw("Vertical2");
             float rotateVector = Input.GetAxisRaw("Horizontal2");
+
+            if (moveVector == 0 && rotateVector == 0)
+            {
+                StopDust();
+            }
+            else
+            {
+                CreateDust();
+            }
 
             this.transform.Translate(0f, -moveVector * moveSpeed * Time.deltaTime, 0f);
             this.transform.Rotate(0f, 0f, -rotateVector * (rotateSpeed * 10) * Time.deltaTime);
@@ -67,5 +85,15 @@ public class TankMovement : MonoBehaviour
 
             bulletRB.velocity =  bulletDirection * bulletSpeed;
         }
+    }
+
+    private void CreateDust()
+    {
+        dust.Play();
+    }
+
+    private void StopDust()
+    {
+        dust.Stop();   
     }
 }
