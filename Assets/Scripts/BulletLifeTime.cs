@@ -26,11 +26,11 @@ public class BulletLifeTime : MonoBehaviour
             Destroy(this.gameObject);
         }
 
-        /*if(collision.CompareTag("Player") || collision.CompareTag("Player2"))
+        if(collision.CompareTag("Player") || collision.CompareTag("Player2"))
         {
             animator.SetBool("Explosion", true);
             Destroy(this.gameObject, 1f);
 
-        }*/
+        }
     }
 }
