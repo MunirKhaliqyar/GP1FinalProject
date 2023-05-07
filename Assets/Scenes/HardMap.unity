@@ -2448,6 +2448,26 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 602401136024264665, guid: dc8064d42c77def46b18e33b1dee86b8, type: 3}
   m_PrefabInstance: {fileID: 19791997}
   m_PrefabAsset: {fileID: 0}
+--- !u!95 &306997099
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 306997092}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: fff5af7db63e22e4e97a5a33b376fd2d, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
 --- !u!1 &331023893
 GameObject:
   m_ObjectHideFlags: 0
@@ -9339,7 +9359,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1326218973772466937, guid: 39a4333f3a6a2a9469d74c43c2670445, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1326218974006582571, guid: 39a4333f3a6a2a9469d74c43c2670445, type: 3}
       propertyPath: m_Name
@@ -16998,6 +17018,7 @@ GameObject:
   - component: {fileID: 1403231715}
   - component: {fileID: 1403231717}
   - component: {fileID: 1403231718}
+  - component: {fileID: 1403231719}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -17146,6 +17167,21 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1403231719
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1403231714}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbda83ff81fac034fa0b29a270967907, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  healthPack: {fileID: 8826836789100655320, guid: f3f44a39a3555414c9053b2d2ac0c004, type: 3}
+  player: {fileID: 306997092}
+  player2: {fileID: 1992552908}
 --- !u!1 &1411189713
 GameObject:
   m_ObjectHideFlags: 0
