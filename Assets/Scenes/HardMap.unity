@@ -2471,11 +2471,7 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 602401136024264665, guid: dc8064d42c77def46b18e33b1dee86b8, type: 3}
   m_PrefabInstance: {fileID: 19791997}
   m_PrefabAsset: {fileID: 0}
-<<<<<<< HEAD
 --- !u!95 &306997099
-=======
---- !u!95 &306997100
->>>>>>> 26f1c3f4e354353b7a2b2df4123ef9d3fa2fe072
 Animator:
   serializedVersion: 5
   m_ObjectHideFlags: 0
@@ -2485,11 +2481,7 @@ Animator:
   m_GameObject: {fileID: 306997092}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-<<<<<<< HEAD
   m_Controller: {fileID: 9100000, guid: fff5af7db63e22e4e97a5a33b376fd2d, type: 2}
-=======
-  m_Controller: {fileID: 9100000, guid: 34c819a256cf78c42abc043f73cd3148, type: 2}
->>>>>>> 26f1c3f4e354353b7a2b2df4123ef9d3fa2fe072
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -4500,13 +4492,6 @@ PrefabInstance:
     - target: {fileID: 1326218973772466937, guid: 39a4333f3a6a2a9469d74c43c2670445, type: 3}
       propertyPath: m_IsActive
       value: 0
-<<<<<<< HEAD
-=======
-      objectReference: {fileID: 0}
-    - target: {fileID: 1326218973969431061, guid: 39a4333f3a6a2a9469d74c43c2670445, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
-      value: 1
->>>>>>> 26f1c3f4e354353b7a2b2df4123ef9d3fa2fe072
       objectReference: {fileID: 0}
     - target: {fileID: 1326218973969431061, guid: 39a4333f3a6a2a9469d74c43c2670445, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
