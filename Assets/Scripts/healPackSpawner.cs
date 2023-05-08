@@ -12,17 +12,18 @@ public class healPackSpawner : MonoBehaviour
     [SerializeField] GameObject player2;
 
     private int maxNumberHealthPacks;
+    private int nextSpawnTime = 5;
 
     // Start is called before the first frame update
     void Start()
     {
         if (PlayerPrefs.GetString("mapChoice") == "easyScene")
         {
-            maxNumberHealthPacks = 3;
+            maxNumberHealthPacks = 2;
         }
         else if(PlayerPrefs.GetString("mapChoice") == "hardScene")
         {
-            maxNumberHealthPacks = 2;
+            maxNumberHealthPacks = 1;
         }
 
         while(healthPacksAmount < maxNumberHealthPacks)
@@ -55,7 +56,7 @@ public class healPackSpawner : MonoBehaviour
         float player1Distance = Vector2.Distance(player1Pos, healthPackPosition);
         float player2Distance = Vector2.Distance(player2Pos, healthPackPosition);
 
-        if (player1Distance > 3 && player2Distance > 3)
+        if (player1Distance > 3 && player2Distance > 3 && Time.time > nextSpawnTime)
         {
             healthPacksAmount++;
             GameObject newHealthPacks = Instantiate(healthPack, healthPackPosition, Quaternion.Euler(0, 0, 180f));
