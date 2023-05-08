@@ -12,4 +12,9 @@ public class SceneController : MonoBehaviour
 
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
+
+    public void GoMainMenu()
+    {
+        SceneManager.LoadScene("Munir");
+    }
 }
